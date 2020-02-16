@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>通过加载状态事件制作进度条</title>
+    <style>
+      .loading {
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        background: #fff;
+      }
+      .loading .pic {
+        height: 64px;
+        width: 64px;
+        background: url(img/35.gif);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      img {
+        margin-bottom: 30px;
+        margin-left: 5vw;
+        height: 90vh;
+        width: 90vw;
+        display: block;
+        border: 3px solid #000;
+      }
+    </style>
+    <script type="text/javascript" src="js/jquery.js"></script>
+    <script>
+      document.onreadystatechange = function() {
+        if(document.readyState == "complete") {
+          $(".loading").fadeOut();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="loading">
+      <div class="pic"></div>
+    </div>
+    <div class="box">
+      <img src="https://github.com/CruxF/IMOOC/blob/master/ProImages/ImgPreloading01.jpg?raw=true" />
+      <img src="https://github.com/CruxF/IMOOC/blob/master/ProImages/ImgPreloading02.jpg?raw=true" />
+      <img src="https://github.com/CruxF/IMOOC/blob/master/ProImages/ImgPreloading03.jpg?raw=true" />
+      <img src="https://github.com/CruxF/IMOOC/blob/master/ProImages/ImgPreloading04.jpg?raw=true" />
+      <img src="https://github.com/CruxF/IMOOC/blob/master/ProImages/ImgPreloading05.jpg?raw=true" />
+      <img src="https://github.com/CruxF/IMOOC/blob/master/ProImages/ImgPreloading06.jpg?raw=true" />
+      <img src="https://github.com/CruxF/IMOOC/blob/master/ProImages/ImgPreloading07.jpg?raw=true" />
+      <img src="https://github.com/CruxF/IMOOC/blob/master/ProImages/ImgPreloading08.jpg?raw=true" />
+      <img src="https://github.com/CruxF/IMOOC/blob/master/ProImages/ImgPreloading09.jpg?raw=true" />
+      <img src="https://github.com/CruxF/IMOOC/blob/master/ProImages/ImgPreloading10.jpg?raw=true" />
+    </div>
+  </body>
+</html>
